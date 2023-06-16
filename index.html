@@ -21,6 +21,8 @@
     />
 
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+
     <title>Web Studio</title>
   </head>
   <body>
@@ -74,6 +76,13 @@
             </li>
           </ul>
         </address>
+
+        <button type="button" class="js-open-menu button-cursor">
+          <svg class="burger-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
+
       </div>
     </header>
 
@@ -90,6 +99,7 @@
           </button>
         </div>
       </section>
+      
       <!-- Featurs section 2 -->
       <section class="featurs-section">
         <div class="container featurs-container">
@@ -181,11 +191,31 @@
           <h2 class="about-title">Our Team</h2>
           <ul class="list about-us-list">
             <li class="team-figuration">
-              <img
-                src="./images/photo-of-mark.jpg"
-                alt="Photo of Mark"
-                width="264"
-              />
+<picture>
+<source srcset="
+./images/mark-guerrero-desktop-1x.jpg 1x,
+./images/mark-guerrero-desktop-2x.jpg 2x" 
+media="(min-width: 1158px)" />
+
+<source srcset="
+./images/mark-guerrero-tablet-1x.jpg 1x,
+./images/mark-guerrero-tablet-2x.jpg 2x" 
+media="(min-width: 768px)" />
+
+<source srcset="
+./images/mark-guerrero-mobile-1x.jpg 1x,
+./images/mark-guerrero-mobile-2x.jpg 2x" 
+media="(max-width: 767px)" />
+
+<img
+src="./images/photo-of-mark.jpg"
+alt="Photo of Mark"
+width="264"
+/>
+
+</picture>
+
+            
               <div class="workers-block">
                 <h3 class="name-of-workers">Mark Guerrero</h3>
                 <p class="work-position">Product Designer</p>
@@ -222,11 +252,38 @@
               </div>
             </li>
             <li class="team-figuration">
+
+              <picture>
+              <source srcset="
+              ./images/tom-ford-desktop-1x.jpg 1x,
+              ./images/tom-ford-desktop-2x.jpg 2x" 
+              media="(min-width: 1158px)" />
+
+              <source srcset="
+              ./images/tom-ford-tablet-1x.jpg 1x,
+              ./images/tom-ford-tablet-2x.jpg 2x" 
+              media="(min-width: 768px)" />
+
+              <source srcset="
+              ./images/tom-ford-mobile-1x.jpg 1x,
+              ./images/tom-ford-mobile-2x.jpg 2x" 
+              media="(max-width: 767px)" />
+
               <img
-                src="./images/photo-of-tom.jpg"
-                alt="Photo of Tom"
-                width="264"
-              />
+              src="./images/photo-of-tom.jpg"
+              alt="Photo of Tom"
+              width="264"
+            />
+            </picture>
+
+
+
+
+
+
+
+
+             
               <div class="workers-block">
                 <h3 class="name-of-workers">Tom Ford</h3>
                 <p class="work-position">Frontend Developer</p>
@@ -263,11 +320,30 @@
               </div>
             </li>
             <li class="team-figuration">
-              <img
+
+              <picture>
+                <source srcset="
+                ./images/camila-garcia-desktop-1x.jpg 1x,
+                ./images/camila-garcia-desktop-2x.jpg 2x" 
+                media="(min-width: 1158px)" />
+              
+                <source srcset="
+                ./images/camila-garcia-tablet-1x.jpg 1x,
+                ./images/camila-garcia-tablet-2x.jpg 2x" 
+                media="(min-width: 768px)" />
+              
+                <source srcset="
+                ./images/camila-garcia-mobile-1x.jpg 1x,
+                ./images/camila-garcia-mobile-2x.jpg 2x" 
+                media="(max-width: 767px)" />
+              
+                <img
                 src="./images/photo-of-camila.jpg"
                 alt="Photo of Camila"
                 width="264"
               />
+              </picture>
+
               <div class="workers-block">
                 <h3 class="name-of-workers">Camila Garcia</h3>
                 <p class="work-position">Marketing</p>
@@ -304,11 +380,32 @@
               </div>
             </li>
             <li class="team-figuration">
-              <img
+
+              <picture>
+                <source srcset="
+                ./images/daniel-wilson-desktop-1x.jpg 1x,
+                ./images/daniel-wilson-desktop-2x.jpg 2x" 
+                media="(min-width: 1158px)" />
+                
+                <source srcset="
+                ./images/daniel-wilson-tablet-1x.jpg 1x,
+                ./images/daniel-wilson-tablet-2x.jpg 2x" 
+                media="(min-width: 768px)" />
+
+                <source srcset="
+                ./images/daniel-wilson-mobile-1x.jpg 1x,
+                ./images/daniel-wilson-mobile-2x.jpg 2x" 
+                media="(max-width: 767px)" />
+
+
+                <img
                 src="./images/photo-of-daniel.jpg"
                 alt="Photo of Daniel"
                 width="264"
               />
+              </picture>
+
+             
               <div class="workers-block">
                 <h3 class="name-of-workers">Daniel Wilson</h3>
                 <p class="work-position">UI Designer</p>
@@ -496,10 +593,8 @@
 
         <p class="modal-text">Leave your contacts and we will call you back</p>
 
-        
-          <form action="#" class="form-modal">
-
-            <div class="form-modal-box">
+        <form action="#" class="form-modal">
+          <div class="form-modal-box">
             <label for="user-name" class="user-dates">Name</label>
             <div class="svg-icon-form">
               <input
@@ -514,9 +609,9 @@
                 <use href="./images/icons.svg#icon-user"></use>
               </svg>
             </div>
-            </div>
+          </div>
 
-            <div class="form-modal-box">
+          <div class="form-modal-box">
             <label for="user-tel" class="user-dates">Phone</label>
             <div class="svg-icon-form">
               <input
@@ -532,10 +627,9 @@
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </div>
-            </div>
+          </div>
 
-
-            <div class="form-modal-box">
+          <div class="form-modal-box">
             <label for="user-email-modal" class="user-dates">Email</label>
             <div class="svg-icon-form">
               <input
@@ -549,10 +643,9 @@
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </div>
-            </div>
+          </div>
 
-
-            <div class="textarea-modal-container"> 
+          <div class="textarea-modal-container">
             <label for="user-comment" class="user-dates">Comment</label>
             <textarea
               name="user-comment"
@@ -560,41 +653,115 @@
               class="textarea-modal"
               placeholder="Text input"
             ></textarea>
-            </div>
+          </div>
 
+          <div class="license-box">
+            <input
+              id="user-privacy"
+              type="checkbox"
+              name="user-privacy"
+              class="visually-hidden license-checkbox"
+              value="true"
+              required
+            />
 
+            <label for="user-privacy" class="license-text">
+              <span class="license-span">
+                <svg width="10" height="8" class="icon-check">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
 
-            <div class="license-box">
-         
-              <input
-                id="user-privacy"
-                type="checkbox"
-                name="user-privacy"
-                class="visually-hidden license-checkbox"
-                value="true"
-                required
-              />
+              <a href="#" class="privacy-policy-link">Privacy Policy</a></label
+            >
+          </div>
 
-              <label for="user-privacy" class="license-text">
-                <span class="license-span">
-                  <svg width="10" height="8" class="icon-check">
-                    <use href="./images/icons.svg#icon-check"></use>
-                  </svg>
-                </span>
-                I accept the terms and conditions of the
-               
-                <a href="#" class="privacy-policy-link"
-                  >Privacy Policy</a
-                ></label>
-            </div>
+          <button type="submit" class="button-form-modal">Send</button>
+        </form>
+      </div>
+    </div>
 
-       
-              <button type="submit" class="button-form-modal">Send</button>
-                     </form>
-        
+    <!-- backdrop - modal burger -->
+
+   
+
+    <div class="backdrop is-open js-menu-container">
+      <div class="modal-burger">
+        <button type="button" class="burger-button-close js-close-menu">
+          <svg class="icon-close-button-burger" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-button"></use>
+          </svg>
+        </button>
+
+        <ul class="list-mobile-burger">
+          <li class="list">
+            <a class="link-cursor link burger-nav-link" href="./index.html"
+              >Studio</a
+            >
+          </li>
+          <li class="list">
+            <a class="link-cursor link burger-nav-link" href="./portfolio.html"
+              >Portfolio</a
+            >
+          </li>
+          <li class="list">
+            <a class="link-cursor link burger-nav-link" href="">Contacts</a>
+          </li>
+        </ul>
+
+        <address class="list address-burger">
+          <ul class="list">
+            <li class="number-burger">
+              <a class="list link number-burger" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+
+            <li class="email-burger">
+              <a class="list link email-burger" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </address>
+
+        <div class="social-media-burger">
+          <ul class="list social-media-list-burger">
+            <li class="social-media-box">
+              <a class="social-list-item" href="#">
+                <svg width="24" height="24" class="social-logo">
+                  <use href="./images/icons.svg#icon-instagram-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-box">
+              <a class="social-list-item" href="#">
+                <svg width="24" height="24" class="social-logo">
+                  <use href="./images/icons.svg#icon-twitter-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-box">
+              <a class="social-list-item" href="#">
+                <svg width="24" height="24" class="social-logo">
+                  <use href="./images/icons.svg#icon-facebook-1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-media-box">
+              <a class="social-list-item" href="#">
+                <svg width="24" height="24" class="social-logo">
+                  <use href="./images/icons.svg#icon-linkedin-1"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
     <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
