@@ -10,12 +10,58 @@
 }} */
 
 
+/* Background imeges hero section */
+
+/* 1-mobile */
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px) {
+    .hero-studio {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/BG-hero-mobile-2x.png); }
+    }
+
+    /* 2-tablet */
+@media screen and (min-width: 768px) {
+    .hero-studio {background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/BG-hero-tablet-1x.png);}
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px) {
+    .hero-studio {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/BG-hero-tablet-2x.png); 
+    } 
+}
+
+/* 3-desktop */
+@media screen and (min-width: 1158px) {
+    .hero-studio {background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/BG-hero-desktop-1x.png);}
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1158px),
+screen and (min-resolution: 192dpi) and (min-width: 1158px),
+screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+    .hero-studio {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/BG-hero-desktop-2x.png); 
+    } 
+}
 
 
-/* ---------------TABLET--------------- */
+
+
+
+/* ---------------TABLET----------------------------------------------------------- */
 @media (min-width:768px)  {
 body {
     max-width: 768px;}
+
+
+    .is-open {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
 
     /* header */
 
@@ -51,6 +97,7 @@ letter-spacing: 0.04em;}
 
 .js-open-menu {
     display: none;  }
+.js-menu-container {display: none;}
 
 /* hero */
 .hero-studio {
@@ -239,7 +286,7 @@ height: 80px;
 }
 
 
-/* ------------------ DESKTOP---------------- */
+/* ------------------ DESKTOP------------------------------------------------------ */
 @media (min-width:1158px) {
 
     .container {
@@ -248,6 +295,16 @@ height: 80px;
         padding-right: 15px;
         margin: 0 auto;
     }
+
+    .is-open {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .js-open-menu {
+        display: none;  }
+    .js-menu-container {display: none;}
 
     .header-list-link {
        display: flex;
@@ -269,6 +326,10 @@ height: 80px;
 .header-link { display: flex;}
 .address-link {  display: flex;
 flex-direction: row;}
+
+
+
+
 
 /* hero */
 
