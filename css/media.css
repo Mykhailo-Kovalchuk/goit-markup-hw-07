@@ -9,6 +9,15 @@
   margin-right: auto;
 }} */
 
+/* modal-burger */
+@media  screen and (max-width:427px) 
+{
+ .number-burger {font-weight: 600;
+    font-size: 32px;}
+    
+}
+
+
 
 /* Background imeges hero section */
 
